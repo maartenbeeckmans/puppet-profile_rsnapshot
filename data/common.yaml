@@ -1,0 +1,12 @@
+---
+profile_rsnapshot::collect_tag: 'rsnapshot'
+profile_rsnapshot::intervals:
+  daily: 7
+  weekly: 4
+profile_rsnapshot::timers:
+  daily:
+    on_calendar: '05:30'
+  weekly:
+    on_calendar: 'Monday  *-*-* 04:30:00'
+profile_rsnapshot::mount_dir: '/srv/rsnapshot'
+profile_rsnapshot::data_device: '/dev/vdb'
