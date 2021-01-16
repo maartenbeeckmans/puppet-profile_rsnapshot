@@ -2,11 +2,11 @@
 #
 #
 class profile_rsnapshot (
-  String               $collect_tag,
   Hash                 $intervals,
   Hash                 $timers,
   Stdlib::AbsolutePath $mount_dir,
   String               $data_device,
+  String               $collect_tag = lookup('rsnapshot_tag', String, undef, 'rsnapshot'),
 ) {
   profile_base::mount{ $mount_dir:
     device => $data_device,

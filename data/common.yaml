@@ -1,5 +1,4 @@
 ---
-profile_rsnapshot::collect_tag: 'rsnapshot'
 profile_rsnapshot::intervals:
   daily: 7
   weekly: 4
