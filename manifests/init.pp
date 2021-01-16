@@ -16,9 +16,10 @@ class profile_rsnapshot (
   class { 'rsnapshot':
     intervals => $intervals,
     timers    => $timers,
+    reports_path => "/var/www/${facts['networking']['fqdn']}",
   }
 
-  #include profile_rsnapshot::webserver
+  include profile_rsnapshot::webserver
 
   # Collect exported resources
   Rsnapshot::Backup <<| tag == $collect_tag |>>
