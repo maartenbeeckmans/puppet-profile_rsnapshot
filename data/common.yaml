@@ -1,11 +1,17 @@
 ---
 profile_rsnapshot::intervals:
+  hourly: 24
   daily: 7
   weekly: 4
+  monthly: 12
 profile_rsnapshot::timers:
+  hourly:
+    on_calendar: '*-*-* *:00:00'
   daily:
     on_calendar: '05:30'
   weekly:
     on_calendar: 'Monday  *-*-* 04:30:00'
+  monthly:
+    on_calendar: '*-*-1 03:30:00'
 profile_rsnapshot::mount_dir: '/srv/rsnapshot'
 profile_rsnapshot::data_device: '/dev/vdb'
