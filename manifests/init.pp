@@ -14,8 +14,8 @@ class profile_rsnapshot (
   }
 
   class { 'rsnapshot':
-    intervals => $intervals,
-    timers    => $timers,
+    intervals    => $intervals,
+    timers       => $timers,
     reports_path => "/var/www/${facts['networking']['fqdn']}",
   }
 
