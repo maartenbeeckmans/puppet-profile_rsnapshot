@@ -2,8 +2,8 @@
 #
 #
 class profile_rsnapshot::webserver {
-  include profile_nginx
-  profile_nginx::vhost { $facts['networking']['fqdn']:
-    autoindex => 'on',
+  include profile_apache
+  profile_apache::vhost { $facts['networking']['fqdn']:
+    docroot => "/var/www/${facts['networking']['fqdn']}",
   }
 }
