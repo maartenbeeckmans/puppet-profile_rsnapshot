@@ -15,3 +15,4 @@ profile_rsnapshot::timers:
     on_calendar: '*-*-1 03:30:00'
 profile_rsnapshot::mount_dir: '/srv/rsnapshot'
 profile_rsnapshot::data_device: '/dev/vdb'
+profile_rsnapshot::sd_service_tags: []
